@@ -4,7 +4,15 @@ include("layout/session.php");
 include("layout/part_one.php");
 ?>
 
-
+<script>
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Bienvenido al sistema <?php echo $nombre_session ?> ",
+        showConfirmButton: false,
+        timer: 2000
+    });
+</script>
         <!-- Contenido principal -->
         <div class="container mt-5">
             <h1 class="text-center mb-4">Listado de Autos</h1>
@@ -47,5 +55,4 @@ include("layout/part_one.php");
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

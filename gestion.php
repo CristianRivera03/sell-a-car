@@ -4,8 +4,8 @@ include('layout/session.php'); // Si es necesario incluir la sesión, hazlo aqu�
 include('layout/part_one.php');
 // Consulta para obtener los autos
 $sql_autos = "SELECT autos.*, marcas.nombre_marca 
-             FROM autos 
-             INNER JOIN marcas ON autos.id_marca = marcas.id_marca";
+FROM autos 
+INNER JOIN marcas ON autos.id_marca = marcas.id_marca";
 $stmt_autos = $pdo->prepare($sql_autos); // Usa $pdo, no $conn
 $stmt_autos->execute();
 $autos = $stmt_autos->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@ $marcas = $stmt_marcas->fetchAll(PDO::FETCH_ASSOC);
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <!-- <th>ID</th> -->
                     <th>Marca</th>
                     <th>Modelo</th>
                     <th>Año</th>
@@ -59,14 +59,14 @@ $marcas = $stmt_marcas->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <?php foreach ($autos as $auto) { ?>
                     <tr>
-                        <td><?php echo $auto['id_auto']; ?></td>
+                        
                         <td><?php echo $auto['nombre_marca']; ?></td>
                         <td><?php echo $auto['modelo']; ?></td>
                         <td><?php echo $auto['year']; ?></td>
                         <td><?php echo $auto['precio']; ?></td>
                         <td><?php echo $auto['descripcion']; ?></td>
-                        <td><img src="uploads/<?php echo $auto['imagen']; ?>" alt="Imagen Auto" width="100"></td>
-                        <td>
+                        <td><img src="<?php echo $auto['imagen']; ?>" class="card-img-top" alt="Imagen del auto"
+                            style="height: 100px; object-fit: cover;"><td>
                             <a href="edicion_auto.php?id_auto=<?php echo $auto['id_auto']; ?>"
                                 class="btn btn-warning btn-sm">Editar</a>
                         </td>

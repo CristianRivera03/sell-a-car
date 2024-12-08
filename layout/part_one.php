@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
     <div class="page">
         <!-- Barra de Navegación -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <span class="navbar-text text-white me-3 ms-5">
+                Bienvenid@ <?php echo $nombre_session; ?>
+            </span>
             <div class="container">
                 <a class="navbar-brand" href="#">Rent-a-car</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -21,9 +27,6 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <span class="nav-link">Bienvenid@ <?php echo $nombre_session; ?></span>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
@@ -31,6 +34,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestion.php">Gestion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vender.php">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registrar_cliente.php">Registrar Cliente</a>
                         </li>
                         <li class="nav-item">
                             <a href="app/controllers/login/cerrar_sesion.php" class="btn btn-danger btn-sm ms-3">
