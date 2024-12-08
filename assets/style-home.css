@@ -1,0 +1,73 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+body {
+    background: white;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de la página */
+.page {
+    background: #e2e2e5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de navegación */
+.navbar {
+    background: #474A59;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #f1f1f2;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff7f50;
+}
+
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-message h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #474A59;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #999;
+}
